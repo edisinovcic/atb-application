@@ -15,7 +15,7 @@ contract ApplicationFactory {
     }
 
     modifier applicationsOpen {
-        require(acceptingApplication == true, "Applications are no longer open! Sorry :(");
+        require(acceptingApplication == true, 'Applications are no longer open! Sorry :(');
         _;
     }
 
