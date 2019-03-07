@@ -1,9 +1,8 @@
 pragma solidity >=0.4.21 <0.6.0;
 
 contract ApplicationFactory {
-    
+    Application[] public applications;
     address manager;
-    address[] public applications;
     bool acceptingApplication = true;
 
     constructor() public {
@@ -16,16 +15,16 @@ contract ApplicationFactory {
     }
 
     modifier applicationsOpen {
-        require(acceptingApplication == true);
+        require(acceptingApplication == true, "Applications are no longer open! Sorry :(");
         _;
     }
 
-    function createApplication(string _username, string _teamName) acceptingApplication public {
-        address newApplication = new Application(_username, _teamName, msg.sender);
+    function createApplication(string memory _username, string memory _teamName) public applicationsOpen {
+        Application newApplication = new Application(_username, _teamName, msg.sender);
         applications.push(newApplication);
     }
 
-    function getApplications() public view {
+    function getApplications() public view returns (Application[] memory) {
         return applications;
     }
 
@@ -42,11 +41,11 @@ contract Application {
     string teamName;
 
     modifier restricted {
-        require(manager == msg.sender);
+        require(manager == msg.sender, "Only manager can update!");
         _;
     }
 
-    constructor(address _creator, string _username, string _teamName) public {
+    constructor(string memory _username, string memory _teamName, address _creator) public {
         manager = _creator;
         username = _username;
         teamName = _teamName;
@@ -55,6 +54,10 @@ contract Application {
     function updateApplication(string memory _username, string memory _teamName) public restricted  {
         username = _username;
         teamName = _teamName;
+    }
+    
+    function getApplication() public view returns (string memory, string memory) {
+        return (username, teamName);
     }
 
 
