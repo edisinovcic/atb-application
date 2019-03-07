@@ -1,5 +1,5 @@
-let Lisinski = artifacts.require("./Lisinski.sol");
+let ApplicationFactory = artifacts.require("./ApplicationFactory.sol");
 
 module.exports = function(deployer) {
-    deployer.deploy(Lisinski);
+    deployer.deploy(ApplicationFactory);
 };
