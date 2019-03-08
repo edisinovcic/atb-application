@@ -1,7 +1,7 @@
 pragma solidity >=0.4.21 <0.6.0;
 
 contract ApplicationFactory {
-    Application[] public applications;
+    Application[] applications;
     address manager;
     bool acceptingApplication = true;
 
@@ -10,19 +10,24 @@ contract ApplicationFactory {
     }
 
     modifier restricted {
-        require(msg.sender == manager);
+        require(msg.sender == manager, "Only manager can access");
         _;
     }
 
     modifier applicationsOpen {
-        require(acceptingApplication == true, 'Applications are no longer open! Sorry :(');
+        require(acceptingApplication == true, "Applications are no longer open! Sorry :(");
         _;
     }
 
-    function createApplication(string memory _username, string memory _teamName) public applicationsOpen {
-        Application newApplication = new Application(_username, _teamName, msg.sender);
+    function addExistingApplication(Application newApplication) public {
         applications.push(newApplication);
     }
+
+   
+//    function createApplication(string memory _username, string memory _teamName) public applicationsOpen {
+//        Application newApplication = new Application(_username, _teamName, msg.sender);
+//        applications.push(newApplication);
+//    }
 
     function getApplications() public view returns (Application[] memory) {
         return applications;
@@ -45,8 +50,8 @@ contract Application {
         _;
     }
 
-    constructor(string memory _username, string memory _teamName, address _creator) public {
-        manager = _creator;
+    constructor(string memory _username, string memory _teamName) public {
+        manager = msg.sender;
         username = _username;
         teamName = _teamName;
     }
@@ -56,9 +61,11 @@ contract Application {
         teamName = _teamName;
     }
     
-    function getApplication() public view returns (string memory, string memory) {
-        return (username, teamName);
+    function getApplication() public view returns (Application) {
+        return this;
     }
-
-
+    
+    function getApplicationData() public view returns (string memory, string memory, address) {
+        return (username, teamName, manager);
+    }
 }
