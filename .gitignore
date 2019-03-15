@@ -1,1 +1,3 @@
 blockchain/geth
+truffle/node_modules/
+truffle/package-lock.json
