@@ -43,12 +43,20 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
+    
+    ganache: {
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: "*" // matching any id
+    },
+
+    /*
     development: {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-
+    */
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
@@ -72,12 +80,13 @@ module.exports = {
 
     // Useful for private networks
     lisinski: {
-      host: "31.147.205.39",
-      port: 23453,
-      network_id: "385",
-      from: "0x67aE790568B01E7aBe81E5744BF3FA82e8EF911C",
-      gas: 20
-      // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: 385,
+      gas: 8000000
+      //host: "localhost",
+      //from: "0xe7dDdDaC3388F7c9442DA49e67E428bEb6639577",
+      //provider: () => new HDWalletProvider(mnemonic, ` https://rpc-bitfalls1.lisinski.online`),
       // network_id: 2111,   // This network is yours, in the cloud.
       // production: true    // Treats this network as if it was a public net. (default: false)
     }
@@ -91,15 +100,15 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
+      //version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
+      //docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+      //settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
+      //  enabled: false,
+      //  runs: 200
       //  },
-      //  evmVersion: "byzantium"
-      // }
+      //evmVersion: "byzantium"
+      //}
     }
   }
 }

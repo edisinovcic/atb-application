@@ -1,5 +1,5 @@
-let ApplicationFactory = artifacts.require("./ApplicationFactory.sol");
+let HackathonApplications = artifacts.require("./HackathonApplications.sol");
 
 module.exports = function(deployer) {
-    deployer.deploy(ApplicationFactory);
+    deployer.deploy(HackathonApplications);
 };
