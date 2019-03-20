@@ -14,6 +14,8 @@ How to get started.
 Wait for 10 minutes to start!!!
 After syncing is completed press ctrl + c (wait it to finish, do not press ctrl + c twice!)
 
+geth account list --datadir chaindata/
+
 If you want to import existing account:
 
 geth account import privatekey --datadir chaindata/ (if private key of the account is stored in privatekey file)
@@ -26,3 +28,6 @@ truffle migrate --network lisinski (--reset)
 Write down deployed contract address, you will need to add it to Hackathon Applications
 
 truffle console attach --network lisinski
+
+
+
