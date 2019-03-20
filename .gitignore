@@ -5,3 +5,4 @@ privatekey
 chaindata/
 .idea/
 bin/
+**/node_modules/
