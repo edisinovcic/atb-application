@@ -16,7 +16,7 @@ geth --unlock $account --networkid 385 --syncmode fast --cache 1024 --rpc
 cd truffle
 truffle console --network lisinski
 
-#let instance = await HackathonApplications.at("0xdefc1199f70b19a15618d3950fc3b1b184a0e65a")
+#let instance = await HackathonApplications.at("0x10a3ab65Cc0Dc2d0A6a6e31D3Bf3036017B78d2c")
 #console.log(instance.abi)
 #console.log(instance.address)
 

@@ -11,7 +11,7 @@ How to get started.
 
 <code>geth init lisinski.genesis --datadir chaindata</code>
 <code>geth --networkid 385 --datadir chaindata/</code>
-Wait for 10 minutes to start!!!
+Wait for up to 10 minutes to start!!!
 After syncing is completed press ctrl + c (wait it to finish, do not press ctrl + c twice!)
 
 geth account list --datadir chaindata/
