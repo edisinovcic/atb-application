@@ -1,0 +1,36 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node addToHackathonApplications.js",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ganache-cli": "^6.4.1",
+    "mocha": "^6.0.2",
+    "truffle-hdwallet-provider": "1.0.5",
+    "truffle-contract": "^4.0.11",
+    "web3": "1.0.0-beta.48",
+    "solc": "0.5.5",
+    "fs-extra": "7.0.1",
+    "next": "8.0.3",
+    "next-routes": "1.4.2",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "ethereumjs-tx": "^1.3.7",
+    "ethereumjs-wallet": "^0.6.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^2.6.3"
+  }
+}

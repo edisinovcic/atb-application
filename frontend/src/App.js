@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import web3 from './web3';
-import contract from './contract';
+import applications from './getAllApplications'
 
 class App extends Component {
 
@@ -14,7 +13,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const applications = await contract.methods.getApplications().call();
+    const applications = applications;
 
     this.setState( {
       applications: applications,
@@ -24,11 +23,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2>Applications for Around the Block hackaton</h2>
+        <h2>Applications in Around the Block hackaton</h2>
         {
-          this.state.applications.map(application => ( 
+          <div>
+          this.state.applications.map(application => (
           <li> {application} </li>
           ))
+            </div>
         }
       </div>
     );

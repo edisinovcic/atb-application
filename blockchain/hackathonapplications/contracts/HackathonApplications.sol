@@ -28,7 +28,7 @@ contract HackathonApplications {
         applications.push(newApplication);
     }
     
-    function isContract(address _addr) private view returns (bool isContract){
+    function isContract(address _addr) private view returns (bool validContract){
         uint32 size;
         assembly {
             size := extcodesize(_addr)

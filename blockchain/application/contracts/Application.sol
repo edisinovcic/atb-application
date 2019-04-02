@@ -1,3 +1,5 @@
+pragma solidity >=0.4.21 <0.6.0;
+
 contract Application {
 
     address manager;
@@ -9,13 +11,12 @@ contract Application {
         _;
     }
 
-    constructor(string memory _teamName, uint32 _teamSize) public {
+    constructor() public {
         manager = msg.sender;
-        teamName = _teamName;
-        teamSize = _teamSize;
+        
     }
 
-    function updateApplication(string memory _teamName, uint32 _teamSize) public restricted  {
+    function register(string memory _teamName, uint32 _teamSize) public restricted {
         teamName = _teamName;
         teamSize = _teamSize;
     }

@@ -1,11 +1,13 @@
+"use strict";
+
 module.exports = {
 
   networks: {
-  
+
     ganache: {
       host: "127.0.0.1",
       port: 7545,
-      network_id: "*" 
+      network_id: "*"
     },
 
     lisinski: {
@@ -16,11 +18,9 @@ module.exports = {
     }
   },
 
-  mocha: {
-  },
+  mocha: {},
 
   compilers: {
-    solc: {
-    }
+    solc: {}
   }
-}
+};
