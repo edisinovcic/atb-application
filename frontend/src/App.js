@@ -13,13 +13,18 @@ class App extends Component {
     }
 
     componentDidMount() {
-        const applications = myFunc();
-        console.log(applications);
+        myFunc().then(applications => {
+            console.log(applications);
 
-        this.setState( {
-            applications: applications,
-        } );
+            this.state.applications.map(application => (
+                JSON.stringify(application)
+            ))};
 
+            this.setState({
+                applications: applications,
+            });
+
+        });
     }
 
     render() {
@@ -29,7 +34,7 @@ class App extends Component {
                 {this.state.applications.length > 0 &&
                 <div>
                     {this.state.applications.map(application => (
-                        <li> {application} </li>
+                        <li> {JSON.stringify(application)} </li>
                     ))}
                 </div>
                 }
