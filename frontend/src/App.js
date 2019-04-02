@@ -12,25 +12,27 @@ class App extends Component {
         };
     }
 
-    async componentDidMount() {
-        const applications = await myFunc();
+    componentDidMount() {
+        const applications = myFunc();
+        console.log(applications);
 
         this.setState( {
             applications: applications,
         } );
+
     }
 
     render() {
         return (
             <div>
                 <h2>Applications in Around the Block hackaton</h2>
-
+                {this.state.applications.length > 0 &&
                 <div>
                     {this.state.applications.map(application => (
                         <li> {application} </li>
                     ))}
                 </div>
-
+                }
             </div>
         );
     }
