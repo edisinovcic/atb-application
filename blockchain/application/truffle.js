@@ -1,7 +1,5 @@
 let HDWalletProvider = require('truffle-hdwallet-provider');
-
-let rpc_endpoint = "https://rpc-bitfalls1.lisinski.online";
-let mnemonic = ""; //"meadow enjoy trend turkey siege saddle group kind flip cruel core wage";
+let data = require('./../../data/data');
 
 module.exports = {
 
@@ -19,7 +17,7 @@ module.exports = {
             gas: 800000
         },
         lisinski_2: {
-            provider: new HDWalletProvider(mnemonic, rpc_endpoint),
+            provider: new HDWalletProvider(data.mnemonic, data.rpc_endpoint),
             network_id: 385,
             gasPrice: 0
         }
