@@ -22,10 +22,10 @@ Wait for up to 10 minutes to start!!!
 
 After the sync is completed you can deploy smart contract to network.
 
-truffle compile
-truffle migrate --network lisinski (--reset)
+<code>truffle compile</code>
+<code>truffle migrate --network lisinski (--reset)</code>
 
-truffle console attach --network lisinski //if you want to test something
+<code>truffle console attach --network lisinski</code> //if you want to test something
 
 
 
