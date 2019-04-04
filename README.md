@@ -7,27 +7,23 @@ How to get started.
 2) Install npm
 3) Install geth (https://geth.ethereum.org/downloads/)
 4) Install truffle (https://truffleframework.com/docs/truffle/getting-started/installation)
+5) Install ganache (https://truffleframework.com/ganache)
+6) Install metamask plugin in browser (https://metamask.io/)
 
-
-<code>geth init lisinski.genesis --datadir chaindata</code>
-<code>geth --networkid 385 --datadir chaindata/</code>
+<code>geth init lisinski.genesis</code>
+<code>geth account import privatekey</code>
+To view if account is properly imported: <code>geth account list</code>
+<code>geth --syncmode="fast" --cache=1024 --networkid 385 --bootnodes "enode://403dde31d89016f37a7554f3cb391c92805410c774df9119da02a6be762c58a74216cf6e3b91c027e75cee64447ae26d7d085f5a616aa209da8e0c321ea626d9@188.166.43.22:23453,enode://05fbb6b5f8f90daf12d88bc0c51b38caae6dec3b3c40a1321b6d79ec3eccff749fe86e48d340ecdcb2300ad96280894f1d6793193f8b60c26c3975947f04970a@31.147.205.39:23453" --rpc --unlock 0x06d608c9f761e7503e8fb8906cb1ba387c754104</code>
 Wait for up to 10 minutes to start!!!
-After syncing is completed press ctrl + c (wait it to finish, do not press ctrl + c twice!)
 
-geth account list --datadir chaindata/
+After the sync is completed you can deploy smart contract to network.
 
-If you want to import existing account:
-
-geth account import privatekey --datadir chaindata/ (if private key of the account is stored in privatekey file)
-
-geth --unlock $account --networkid 385 --syncmode fast --cache 1024 --rpc --datadir chaindata/ (change $account with your account!!)
-
-After writing code run (in truffle folder):
+truffle compile
 truffle migrate --network lisinski (--reset)
 
-Write down deployed contract address, you will need to add it to Hackathon Applications
+truffle console attach --network lisinski //if you want to test something
 
-truffle console attach --network lisinski
+
 
 
 
