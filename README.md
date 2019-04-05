@@ -41,3 +41,6 @@ Links for Lisinski testnet:
 
 Twitter username: ATB57948960
 Twitter password: necenikada
+
+Google form for application to hackathon: 
+https://forms.gle/bcFQqVhBn4oxLKUTA
