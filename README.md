@@ -39,6 +39,9 @@ Links for Lisinski testnet:
 <code>https://pipa.lisinski.online/</code>
 <code>https://forum.lisinski.online/</code>
 <code>https://status.lisinski.online/</code>
+rpc_endpoint: https://rpc-bitfalls1.lisinski.online
+
+
 
 Twitter username: ATB57948960
 Twitter password: necenikada
