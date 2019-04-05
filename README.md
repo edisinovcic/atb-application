@@ -9,6 +9,7 @@ How to get started.
 4) Install truffle (https://truffleframework.com/docs/truffle/getting-started/installation)
 5) Install ganache (https://truffleframework.com/ganache)
 6) Install metamask plugin in browser (https://metamask.io/)
+7) Install mycrypto (https://download.mycrypto.com/)
 
 <code>geth init lisinski.genesis</code>
 
