@@ -36,6 +36,7 @@ Good library to use: https://docs.openzeppelin.org/docs/get-started.html
 
 Links for Lisinski testnet:
 <code>https://pipa.lisinski.online/</code>
+<code>https://forum.lisinski.online/</code>
 
 Twitter username: ATB57948960
 Twitter password: necenikada
