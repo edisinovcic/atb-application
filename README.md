@@ -31,3 +31,10 @@ After the sync is completed you can deploy smart contract to network.
 Interesting starter: https://github.com/NodeFactoryIo/solidity-node-docker-starter
 
 Good library to use: https://docs.openzeppelin.org/docs/get-started.html
+
+
+Links for Lisinski testnet:
+<code>https://pipa.lisinski.online/</code>
+
+Twitter username: ATB57948960
+Twitter password: necenikada
