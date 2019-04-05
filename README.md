@@ -28,6 +28,6 @@ After the sync is completed you can deploy smart contract to network.
 <code>truffle console attach --network lisinski</code> //if you want to test something
 
 
+Interesting starter: https://github.com/NodeFactoryIo/solidity-node-docker-starter
 
-
-
+Good library to use: https://docs.openzeppelin.org/docs/get-started.html
