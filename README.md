@@ -33,6 +33,7 @@ Interesting starter: https://github.com/NodeFactoryIo/solidity-node-docker-start
 
 Good library to use: https://docs.openzeppelin.org/docs/get-started.html
 
+FER token:<code>https://gist.github.com/ivoras/c8945ac73d9212d4ca128ced2dab2cae</code> 
 
 Links for Lisinski testnet:
 <code>https://pipa.lisinski.online/</code>
